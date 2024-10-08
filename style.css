@@ -6,3 +6,87 @@
   --text-color-black: #000;
   --text-color-white: #fff;
 }
+
+header {
+  background-color: var(--background-color);
+  color: var(--text-color-black);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: end;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-the-bridge {
+  position: absolute;
+  margin: 20px;
+  padding: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar__ul {
+  padding: 5px;
+  display: flex;
+  list-style: none;
+  margin: 25px 0px 30px 60px;
+}
+
+.nav-bar__ul a {
+  text-decoration: none;
+  color: var(--text-color-black);
+  margin: 35px;
+}
+
+.button-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--accent-color);
+  color: var(--text-color-white);
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bolder;
+}
+
+.wrap {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgb(0 0 0 / .6), rgb(0 0 0 / .3)), url(/img/poratadacover-scaled-1.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 50px 50px;
+}
+
+.wrap-texto {
+  color: var(--text-color-white);
+  font-size: large;
+  font-weight: bold;
+  width: 50%;
+}
+
+.wrap-texto p, h1 {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
