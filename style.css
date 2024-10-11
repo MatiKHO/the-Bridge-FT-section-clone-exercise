@@ -89,3 +89,21 @@ body {
   margin: 0;
 }
 
+.bootcamps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bootcamps-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-solid{}
+
+.fa-square-full{
+  color: var(--primary-color);
+}
+
