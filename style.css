@@ -7,6 +7,16 @@
   --text-color-white: #fff;
 }
 
+@font-face {
+  font-family: "Sen-Regular";
+  src: url(/Sen-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Sen-Bold";
+  src: url(/Sen-VariableFont_wght.ttf);
+}
+
 header {
   background-color: var(--background-color);
   color: var(--text-color-black);
@@ -14,31 +24,31 @@ header {
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Sen-Regular";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
-}
-
-.justify-between {
-  display: flex;
-  justify-content: end;
-  justify-items: center;
-  align-items: center;
-  padding: 15px;
+  position: relative;
 }
 
 .logo-the-bridge {
-  position: absolute;
   padding: 25px;
 }
 
-.nav-bar {
+.header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
 }
+
+.nav-container {
+  display: flex;
+}
+
 
 .nav-bar__ul {
   padding: 4px;
@@ -50,13 +60,16 @@ body {
 .nav-bar__ul a {
   text-decoration: none;
   color: var(--text-color-black);
-  margin: 35px;
+  margin: 15px;
+}
+.fa-2xs {
+  margin-left: 4px;
+  margin-top: 4px;
 }
 
+
 .button-info {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  padding: 15px;
   background-color: var(--accent-color);
   color: var(--text-color-white);
   border-radius: 5px;
@@ -66,7 +79,7 @@ body {
 }
 
 .wrap {
-  width: 100vw;
+  max-width: 100vw;
   height: 500px;
   display: flex;
   align-items: center;
@@ -74,6 +87,7 @@ body {
   background-size: cover;
   background-position: center;
   padding: 50px 50px;
+  margin-bottom: 20px;
 }
 
 .wrap-texto {
@@ -89,21 +103,216 @@ body {
   margin: 0;
 }
 
-.bootcamps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.main-content {
+  padding: 50px;
 }
 
-.bootcamps-item{
+
+.cards-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 15px;
 }
 
-.fa-solid{}
+/* TRANSICION CARDS*/
 
-.fa-square-full{
+.bootcamp-card, .master-card { 
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.bootcamp-card:hover, .master-card:hover {
+    transform: translateX(0px);
+}
+
+
+.card-img {
+  width: 225px;
+  object-fit: cover;
+  transition: opacity .5s ease-in-out;
+}
+
+.bootcamp-card:hover .card-img, .master-card:hover .card-img {
+  opacity: .2;
+}
+
+.bootcamp-card:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 217px;
+  background-image: url("/img/deco-bootcamps.png");
+  background-color: var(--accent-color);
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+
+.master-card:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 217px;
+  background-image: url("/img/deco-master.png");
+  background-color: var(--accent-color);
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+.fa-square-full {
   color: var(--primary-color);
+  margin: 5px;
+  transition: color .5s ease-in-out;
 }
+
+.bootcamp-card:hover .fa-square-full, .master-card:hover .fa-square-full {
+  color: white;
+}
+
+
+.bootcamp-card p, .master-card p {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: var(--text-color-white);
+  font-weight: 700;
+}
+
+.dif-color {
+  background-color: var(--secondary-color);
+  padding: 50px 30px;
+  color: var(--text-color-white);
+}
+
+.dif-color h2 {
+  font-family: "Sen-Bold";
+  font-size: 40px;
+}
+
+
+.diferent-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.diferent-item {
+  background-color: var(--background-color);
+  color: var(--text-color-black);
+  height: 75vh;
+  border-radius: 10px;
+  transition: translateY .2s ease-in-out;
+  position: relative;
+}
+
+
+/* ANIMACION */
+
+@keyframes translate-top {
+  0% {
+   transform: translateY(0px);
+   border-radius: 10px;
+   background-color: var(--background-color);
+  }
+
+  100% {
+    transform: translateY(-5px);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(236, 236, 236);
+  }
+}
+
+@keyframes translate-down {
+  0% {
+    transform: translateY(-5px);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  100% {
+    transform: translateY(0px);
+    border-radius: 10px;
+  }
+  
+}
+
+
+.diferent-item:hover {
+  animation-name: translate-top;
+  animation-duration: .2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+.diferent-item:not(:hover) {
+  animation: translate-down .2s ease-in-out 1 running forwards;
+}
+
+
+/* ANIMACION */
+
+.item-1 {
+  height: 60vh;
+}
+
+.diferent-item h3 {
+  font-family: "Sen-Bold";
+  font-size: 25px;
+  margin: 20px 20px;
+  line-height: .95;
+}
+
+.diferent-item p {
+  margin: 20px;
+  line-height: 2;
+}
+
+.red-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  height: 10px;
+  border: none;
+  margin: 0px 20px;
+  background-color: var(--secondary-color);
+}
+
+.cookies img{
+  background-color: var(--primary-color);
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  border-radius: 30px;
+  position: fixed;
+  bottom: 0;
+  margin: 10px;
+  z-index: 1001;
+}
+
+
+
+
 

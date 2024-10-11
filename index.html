@@ -3,28 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Bridge</title>
+    <title>The Bridge | Digital Talent Accelerator</title>
+    <link rel="shortcut icon" href="/img/descarga.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./styles/normalize.css" />
+    <script
+      src="https://kit.fontawesome.com/014831a8f5.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
-  <body class="body" style="max-width: 1440px">
-    <header>
-      <div class="logo-the-bridge justify-between">
+  <body class="body">
+    <div class="cookies">
+      <img src="/img/cookies.png" alt="cookies consent" />
+    </div>
+    <header class="header">
+      <div class="logo-the-bridge">
         <img src="/img/Logo-the_bridge.svg" alt="Logo-the_bridge" />
       </div>
-      <div class="justify-between">
-        <nav class="nav-bar">
+      <div class="nav-container">
+        <nav>
           <ul class="nav-bar__ul">
-            <li><a href="#">Bootcamps</a></li>
-            <li><a href="#">Másters</a></li>
-            <li><a href="#">Campus</a></li>
-            <li><a href="#">Para empresas</a></li>
+            <li>
+              <a href="#"
+                >Bootcamps<i class="fa-solid fa-chevron-down fa-2xs"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                >Másters<i class="fa-solid fa-chevron-down fa-2xs"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                >Campus<i class="fa-solid fa-chevron-down fa-2xs"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                >Para empresas<i class="fa-solid fa-chevron-down fa-2xs"></i
+              ></a>
+            </li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Quiénes somos</a></li>
           </ul>
         </nav>
-
         <button class="button-info">Solicita información</button>
       </div>
     </header>
@@ -34,7 +57,7 @@
         <div class="wrap">
           <div class="wrap-texto">
             <h1>Tú quieres un trabajo mejor. Nosotros podemos ayudarte</h1>
-            <br>
+            <br />
             <p>
               Lideramos la formación tecnológica más avanzada en Inteligencia
               Artificial, Data Science, Desarrollo Web, Ciberseguridad, UX,
@@ -43,58 +66,111 @@
           </div>
         </div>
       </section>
-      
-      <section>
-        <div>
-          <h2>Bootcamps</h2>
-            <div class="bootcamps">
-              <div class="bootcamp-item">
-                <img src="/img/estudiar-data-science-1.png" alt="data-science">
+
+      <div class="main-content">
+        <section>
+          <div>
+            <h2>Bootcamps</h2>
+            <div class="cards-container">
+              <div class="bootcamp-card">
+                <img
+                  class="card-img"
+                  src="/img/estudiar-data-science-1.png"
+                  alt="data-science"
+                />
                 <p><i class="fa-solid fa-square-full"></i>Data Science</p>
               </div>
-              <div>
-                <img src="/img/estudiar-ciberseguridad.png" alt="cybersecurity">
+              <div class="bootcamp-card">
+                <img
+                  class="card-img"
+                  src="/img/estudiar-ciberseguridad.png"
+                  alt="cybersecurity"
+                />
                 <p><i class="fa-solid fa-square-full"></i>Ciberseguridad</p>
               </div>
-              <div>
-                <img src="/img/estudiar-programacion-front-end-back.png" alt="full-stack">
+              <div class="bootcamp-card">
+                <img
+                  class="card-img"
+                  src="/img/estudiar-programacion-front-end-back.png"
+                  alt="full-stack"
+                />
                 <p><i class="fa-solid fa-square-full"></i>Full Stack</p>
               </div>
-              <div>
-                <img src="/img/estudiar-diseno-ux-diseno-de-aplicaciones-diseno-web.png" alt="ux-ui">
+              <div class="bootcamp-card">
+                <img
+                  class="card-img"
+                  src="/img/estudiar-diseno-ux-diseno-de-aplicaciones-diseno-web.png"
+                  alt="ux-ui"
+                />
                 <p><i class="fa-solid fa-square-full"></i>UX / UI</p>
               </div>
-              <div>
-                <img src="/img/estudiar-el-mejor-marketing-digital.png" alt="marketing-digital">
+              <div class="bootcamp-card">
+                <img
+                  class="card-img"
+                  src="/img/estudiar-el-mejor-marketing-digital.png"
+                  alt="marketing-digital"
+                />
                 <p><i class="fa-solid fa-square-full"></i>Marketing Digital</p>
               </div>
-              </div>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section>
-        <h2>Másteres</h2>
-        <ul>
-          <li>Inteligencia Artificial & People Analytics</li>
-          <li>IA, Data & Financial Analytics</li>
-          <li>IA & Derecho Digital (LegalTech)</li>
-        </ul>
-      </section>
+        <section>
+          <h2>Másteres</h2>
+          <div class="cards-container">
+            <div class="master-card">
+              <img
+                class="card-img"
+                src="/img/master-1.jpg"
+                alt="IA & People Analytics"
+              />
+              <p>
+                <i class="fa-solid fa-square-full"></i>Inteligencia Artificial &
+                People Analytics
+              </p>
+            </div>
+            <div class="master-card">
+              <img
+                class="card-img"
+                src="/img/master-2.jpg"
+                alt="IA, Data & Financial Analytics"
+              />
+              <p>
+                <i class="fa-solid fa-square-full"></i>IA, Data & Financial
+                Analytics
+              </p>
+            </div>
+            <div class="master-card">
+              <img
+                class="card-img"
+                src="/img/master-3.jpg"
+                alt="IA & Derecho Digital"
+              />
+              <p>
+                <i class="fa-solid fa-square-full"></i>IA & Derecho Digital
+                (LegalTech)
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
 
-      <section>
+      <section class="dif-color">
         <h2>¿Qué nos hace diferentes?</h2>
-        <div>
-          <article>
+        <div class="diferent-container">
+          <article class="diferent-item item-1">
             <h3>Programas actualizados</h3>
+            <hr class="red-line" />
             <p>
               Ofrecemos programas actualizados y adaptados a los retos y
               exigencias del mercado laboral actual. Revisamos continuamente los
               programas, siempre asesorados por empresas y profesionales.
             </p>
           </article>
-          <article>
+          <article class="diferent-item">
             <h3>Un método de aprendizaje único</h3>
+            <hr class="red-line" />
             <p>
               Conseguimos resultados superiores a través de formatos educativos
               innovadores que facilitan un aprendizaje efectivo. Desarrollamos
@@ -102,16 +178,18 @@
               última generación.
             </p>
           </article>
-          <article>
+          <article class="diferent-item">
             <h3>Profesores expertos y en activo</h3>
+            <hr class="red-line" />
             <p>
               El equipo docente de The Bridge está formado tanto por profesores
               del ámbito académico como por profesionales en activo que trabajan
               en su día a día en lo que enseñan en las aulas.
             </p>
           </article>
-          <article>
+          <article class="diferent-item">
             <h3>Nuestra comunidad Talent Hub</h3>
+            <hr class="red-line" />
             <p>
               Un espacio abierto para nuestros alumni y empresas colaboradoras
               con ofertas de empleo, mentores, contenido especializado para cada
